@@ -1,12 +1,9 @@
 var express = require('express');
 var routes = express.Router();
+var rootPath = require('app-root-path');
 
 routes.get('/', function(req, res) {
-    res.send('im the home page!');  
-});
-
-routes.get('/about', function(req, res) {
-    res.send('im the about page!'); 
+    res.sendFile(rootPath + '/public/views/main.html');
 });
 
 module.exports = routes;
