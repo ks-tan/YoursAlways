@@ -1,5 +1,8 @@
 $(document).ready(function(){
 
-	//main.html functions here
+	$('.title_description').fadeIn("slow");
+	$('.title_main').fadeIn("slow", function(){
+		$('.title_button').fadeIn("slow");
+	});
 
 });
