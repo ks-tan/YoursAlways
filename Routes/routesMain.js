@@ -6,4 +6,8 @@ routes.get('/', function(req, res) {
     res.sendFile(rootPath + '/public/views/main.html');
 });
 
+routes.get('/login', function(req, res) {
+    res.sendFile(rootPath + '/public/views/login.html');
+});
+
 module.exports = routes;
