@@ -3,12 +3,11 @@ var routes = express.Router();
 var rootPath = require('app-root-path');
 
 routes.get('/', function(req, res) {
-    // res.sendFile(rootPath + '/public/views/main.html');
-    res.redirect('/views/main.html');
+	res.render('pages/main');
 });
 
-routes.get('/login', function(req, res) {
-    res.sendFile(rootPath + '/public/views/login.html');
+routes.get('/write', function(req, res) {
+	res.render('pages/write');
 });
 
 module.exports = routes;
