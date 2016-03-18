@@ -20,11 +20,12 @@
 	padding: 1vw;
 	border-radius: 10px;
 	cursor: pointer;
-	box-shadow: 10px 10px 20px #888888;
+	box-shadow: 5px 5px 0px #fb4444;
 }
 
 .title_container .title_button:hover{
 	background-color: #fb4444;
+	box-shadow: 5px 5px 0px #ff0000;
 }
 
 .title_container .title_learn_more {
