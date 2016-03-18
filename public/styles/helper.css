@@ -1,6 +1,8 @@
-body {
-	font-family: 'Lato', serif;
-}
+body { font-family: 'Lato', serif; }
+
+a { text-decoration: none; }
+a:link, a:visited { color: #ff8686; }
+a:hover { color: #fb4444; }
 
 .center {
 	text-align: center;
@@ -14,4 +16,20 @@ body {
 
 .red {
 	color: #ff8686	;
+}
+
+.header_container {
+	position: absolute;
+	right: 10vw;
+	top: 1vw;
+	font-size: 25px;
+	color: #ff8686;
+}
+
+@media screen and (max-width:516px) {
+	.header_container {
+		font-size: 15px;
+		top: 2vw;
+		right: 5vw;
+	}
 }
