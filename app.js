@@ -7,8 +7,8 @@ var app = express();
 app.set('port', (process.env.PORT || 5000));
 app.set('view engine', 'ejs');
 
-app.use(express.static(__dirname + '/public'));
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static(__dirname + '/public')); //place to server static files
+app.use(bodyParser.urlencoded({ extended: true })); //for retrieving form data
 app.use('/', routesMain);
 
 mongoose.connect('mongodb://localhost/YoursAlways');

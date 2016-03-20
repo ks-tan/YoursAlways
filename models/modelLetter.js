@@ -1,7 +1,6 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-//creating a new 'Schema'
 var letterSchema = new Schema({
 	letterBody: String,
 	created_at: Date
@@ -13,5 +12,4 @@ letterSchema.pre('save', function(next){
 	next();
 });
 
-//Turning letterSchema into a 'Model' and export it
 module.exports = mongoose.model('letter',letterSchema);

@@ -12,7 +12,6 @@ routes.get('/write', function(req, res) {
 	res.render('pages/write');
 });
 
-//submitting new letter to database
 routes.post('/newLetter', function(req, res) {
 	var letter = {
 		letterBody: req.body.letterBody
