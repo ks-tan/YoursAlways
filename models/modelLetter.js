@@ -14,4 +14,4 @@ letterSchema.pre('save', function(next){
 });
 
 //Turning letterSchema into a 'Model' and export it
-module.exports = mongoose.model('Letter',letterSchema);
+module.exports = mongoose.model('letter',letterSchema);
