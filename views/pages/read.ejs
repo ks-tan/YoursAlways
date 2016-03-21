@@ -8,10 +8,9 @@
 </head>
 <body>
 	<% include ../partials/header %>
-	<h1>Editor</h1>
-	<form action="/newLetter" method="post">
-		<input type="text" name="letterBody"></input>
-		<button type="submit">Send</button>
-	</form>
+	<h1>Read</h1>
+	<% for(var i = 0; i < letters.length; i++){ %>
+		<p><%= letters[i].letterBody %></p>
+	<% } %>
 </body>
 </html>

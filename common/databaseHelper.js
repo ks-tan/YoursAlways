@@ -8,6 +8,15 @@ var databaseHelper = {
 			}
 			console.log(object + " successfully saved to db");
 		});
+	},
+
+	findObject: function(object,model,returnResult){
+		model.find(object, function(err, result){
+			if (err) {
+				console.log("Error finding " + object + " from db");
+			}
+			returnResult(result);
+		});
 	}
 
 };

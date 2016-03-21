@@ -19,4 +19,10 @@ routes.post('/newLetter', function(req, res) {
 	database.saveObject(letter,Letter);
 });
 
+routes.get('/read', function(req,res){
+	database.findObject({},Letter,function(result){
+		res.render('pages/read', {letters: result});
+	});
+});
+
 module.exports = routes;
