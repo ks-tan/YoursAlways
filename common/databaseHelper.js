@@ -6,7 +6,6 @@ var databaseHelper = {
 			if (err) {
 				console.log("Problem saving " + object + " to db");
 			}
-			console.log(object + " successfully saved to db");
 		});
 	},
 
@@ -14,8 +13,18 @@ var databaseHelper = {
 		model.find(object, function(err, result){
 			if (err) {
 				console.log("Error finding " + object + " from db");
+				return;
 			}
 			returnResult(result);
+		});
+	},
+
+	deleteObject: function(object,model){
+		model.findOneAndRemove(object,function(err){
+			if (err) {
+				console.log("Error deleting " + object + " from db");
+				return;
+			}
 		});
 	}
 

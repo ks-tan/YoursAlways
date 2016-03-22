@@ -26,4 +26,12 @@ routes.get('/read', function(req,res){
 	});
 });
 
+routes.post('/deleteLetter', function(req,res){
+	var letter = {
+		_id: req.body._id
+	};
+	database.deleteObject(letter,Letter);
+	res.redirect('/read');
+});
+
 module.exports = routes;

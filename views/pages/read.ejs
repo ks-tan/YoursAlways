@@ -12,7 +12,10 @@
 	<% for(var i = 0; i < letters.length; i++){ %>
 		<div>
 			<%= letters[i].letterBody %> -------  
-			<button>X</button>
+			<form action="/deleteLetter" method="post">
+				<input name="_id" type="hidden" value= <%=letters[i]._id%> />
+				<input type="submit" value="X" />
+			</form>
 		</div>
 	<% } %>
 </body>
