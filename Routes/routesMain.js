@@ -17,6 +17,7 @@ routes.post('/newLetter', function(req, res) {
 		letterBody: req.body.letterBody
 	};
 	database.saveObject(letter,Letter);
+	res.redirect('/read');
 });
 
 routes.get('/read', function(req,res){

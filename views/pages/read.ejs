@@ -10,7 +10,10 @@
 	<% include ../partials/header %>
 	<h1>Read</h1>
 	<% for(var i = 0; i < letters.length; i++){ %>
-		<p><%= letters[i].letterBody %></p>
+		<div>
+			<%= letters[i].letterBody %> -------  
+			<button>X</button>
+		</div>
 	<% } %>
 </body>
 </html>
