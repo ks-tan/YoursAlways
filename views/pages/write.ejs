@@ -3,23 +3,32 @@
 <head>
 	<title>Yours Always</title>
 	<link rel="stylesheet" type="text/css" href="styles/helper.css">
+	<link rel="stylesheet" type="text/css" href="styles/write.css">
 	<script src = "http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="scripts/superplaceholder.js"></script>
+	<script src="scripts/autosize.js"></script>
+	<script src="scripts/write.js"></script>
 	<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 </head>
 <body>
 	<% include ../partials/header %>
-	<h1>Editor</h1>
+	<div class="page_title red">write_</div>
+	<div class="letter_container">
+		<br>
 	<% if (letter == null) { %>
 		<form action="/newLetter" method="post">
-			<input type="text" name="letterBody"/>
-			<button type="submit">Send</button>
-		</form>
+			<span class="red">Dear</span> <input id="dear" class="sign_off_fields" placeholder=" name"/><br><br>
+			<textarea id="letter_form" class="letter_form" type="text" name="letterBody" placeholder="Start writing..."></textarea>
 	<%} else {%>
 		<form action="/updateLetter" method="post">
-			<input type="text" name="letterBody" value = <%= letter[0].letterBody %> />
+			<span class="red">Dear</span> <input id="dear" class="sign_off_fields" placeholder=" name"/><br><br>
+			<textarea id="letter_form" class="letter_form" type="text" name="letterBody" placeholder="Start writing..."><%= letter[0].letterBody %></textarea>
 			<input name="_id" type="hidden" value= <%=letter[0]._id%> />
+	<% } %>
+			<br><input id="regards" class="sign_off_fields" placeholder="regards"/>
+			<br><span class="red">X</span> <input id="your_name" class="sign_off_fields" placeholder="your name"/>
 			<button type="submit">Send</button>
 		</form>
-	<% } %>
+	</div>
 </body>
 </html>

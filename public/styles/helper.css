@@ -26,6 +26,13 @@ a:hover { color: #fb4444; }
 	color: #ff8686;
 }
 
+.page_title {
+	width: 100%;
+	text-align: center;
+	font-size: 40px;
+	margin-top: 4vw;
+}
+
 @media screen and (max-width:516px) {
 	.header_container {
 		font-size: 15px;
