@@ -9,9 +9,17 @@
 <body>
 	<% include ../partials/header %>
 	<h1>Editor</h1>
-	<form action="/newLetter" method="post">
-		<input type="text" name="letterBody"></input>
-		<button type="submit">Send</button>
-	</form>
+	<% if (letter == null) { %>
+		<form action="/newLetter" method="post">
+			<input type="text" name="letterBody"/>
+			<button type="submit">Send</button>
+		</form>
+	<%} else {%>
+		<form action="/updateLetter" method="post">
+			<input type="text" name="letterBody" value = <%= letter[0].letterBody %> />
+			<input name="_id" type="hidden" value= <%=letter[0]._id%> />
+			<button type="submit">Send</button>
+		</form>
+	<% } %>
 </body>
 </html>

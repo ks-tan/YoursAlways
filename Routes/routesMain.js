@@ -9,7 +9,7 @@ routes.get('/', function(req, res) {
 });
 
 routes.get('/write', function(req, res) {
-	res.render('pages/write');
+	res.render('pages/write', {letter: null});
 });
 
 routes.post('/newLetter', function(req, res) {
@@ -31,6 +31,26 @@ routes.post('/deleteLetter', function(req,res){
 		_id: req.body._id
 	};
 	database.deleteObject(letter,Letter);
+	res.redirect('/read');
+});
+
+routes.post('/edit', function(req,res){
+	var letter = {
+		_id: req.body._id,
+	};
+	database.findObject(letter, Letter, function(result){
+		res.render('pages/write', {letter: result});
+	});
+});
+
+routes.post('/updateLetter', function(req,res){
+	var query = {
+		_id: req.body._id
+	};
+	var update = {
+		letterBody: req.body.letterBody
+	};
+	database.updateObject(query,update,Letter);
 	res.redirect('/read');
 });
 

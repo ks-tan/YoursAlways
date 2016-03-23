@@ -26,6 +26,16 @@ var databaseHelper = {
 				return;
 			}
 		});
+	},
+
+	updateObject: function(query,update,model){
+		model.findOneAndUpdate(query,update,function(err,result){
+			if (err) {
+				console.log("Error updating " + object + " in db");
+				return;
+			}
+			console.log("UPDATED: " + result);
+		});
 	}
 
 };

@@ -16,6 +16,10 @@
 				<input name="_id" type="hidden" value= <%=letters[i]._id%> />
 				<input type="submit" value="X" />
 			</form>
+			<form action="/edit" method="post">
+				<input name="_id" type="hidden" value= <%=letters[i]._id%> />
+				<input type="submit" value="Edit" />
+			</form>
 		</div>
 	<% } %>
 </body>
