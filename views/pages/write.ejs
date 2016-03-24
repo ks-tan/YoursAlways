@@ -12,8 +12,8 @@
 </head>
 <body>
 	<% include ../partials/header %>
-	<div class="page_title red">write_</div><br>
-	<div class="letter_container">
+	<div style="display:none" class="page_title red">write_</div><br>
+	<div style="display:none" class="letter_container">
 	<% if (letter == null) { %>
 		<form action="/newLetter" method="post">
 			<span class="red">Dear</span> <input id="dear" class="sign_off_fields" placeholder=" name" name="addressee"></input><br><br>

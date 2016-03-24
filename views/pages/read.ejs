@@ -3,22 +3,28 @@
 <head>
 	<title>Yours Always</title>
 	<link rel="stylesheet" type="text/css" href="styles/helper.css">
+	<link rel="stylesheet" type="text/css" href="styles/read.css">
 	<script src = "http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="scripts/read.js"></script>
 	<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 </head>
 <body>
 	<% include ../partials/header %>
-	<h1>Read</h1>
+	<div style="display:none" class="red page_title">read</div>
 	<% for(var i = 0; i < letters.length; i++){ %>
-		<div>
-			<%= letters[i].letterBody %> -------  
-			<form action="/deleteLetter" method="post">
+		<div style="display:none" class="letter_container">
+			Dear <%= letters[i].addressee %>,<br><br>
+			<%= letters[i].letterBody %><br><br>
+			<%= letters[i].regards %><br>
+			<%= letters[i].addresser %><br><br>
+			<span class="red"><%= letters[i].created_at %></span><br>
+			<form class="form" action="/edit" method="post">
 				<input name="_id" type="hidden" value= <%=letters[i]._id%> />
-				<input type="submit" value="X" />
+				<input class="button" type="submit" value="Edit" />
 			</form>
-			<form action="/edit" method="post">
+			<form class="form" action="/deleteLetter" method="post">
 				<input name="_id" type="hidden" value= <%=letters[i]._id%> />
-				<input type="submit" value="Edit" />
+				<input class="button" type="submit" value="Delete" />
 			</form>
 		</div>
 	<% } %>

@@ -1,0 +1,22 @@
+.letter_container {
+	width: 55%;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 1vw;
+	font-size: 20px;
+	background-color: #ffefe4;
+	padding: 1vw;
+}
+
+.letter_container .form {
+	display: inline-block;
+	margin-top: 1vw;
+}
+
+.letter_container .form .button {
+	font-size: 20px;
+	background-color: #ff8686;
+	border: none;
+	border-radius: 5px;
+	color: #ffffff;
+}

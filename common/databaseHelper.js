@@ -34,7 +34,6 @@ var databaseHelper = {
 				console.log("Error updating " + object + " in db");
 				return;
 			}
-			console.log("UPDATED: " + result);
 		});
 	}
 

@@ -1,5 +1,9 @@
 $(document).ready(function(){
 
+	$('.page_title').fadeIn("slow");
+	$('.letter_container').fadeIn("slow");
+
+
 	superplaceholder({
 		el: dear,
 		sentences: [ 'Lois', 'Andy', 'Jack', 'Emma' ],
