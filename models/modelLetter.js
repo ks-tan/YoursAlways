@@ -2,7 +2,10 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var letterSchema = new Schema({
+	addressee: String,
 	letterBody: String,
+	regards: String,
+	addresser: String,
 	created_at: Date
 });
 

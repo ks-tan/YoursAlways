@@ -2,6 +2,9 @@
 	font-size: 20px;
 	margin-left: 18vw;
 	margin-right: 18vw;
+	background-color: #ffefe4;
+	padding: 2vw;
+	border-radius: 10px;
 }
 
 .letter_container .letter_form {
@@ -11,19 +14,27 @@
 	outline: none;
 	width: 100%;
 	height: 20em;
-	/*background-color: #ffefe4;*/
 	font-size: 20px;
-	border-radius: 10px;
+	background-color: #ffefe4;
 }
 
 .letter_container .sign_off_fields {
-	box-shadow: 0px 2px 0px 0px #ffefe4, 0px 2px 0px 0px #ffefe4;;
+	box-shadow: 0px 2px 0px 0px #ff8686, 0px 2px 0px 0px #ff8686;;
 	margin: 2px;
 	width: 8em;
 	border: none;
 	resize: none;
 	overflow: auto;
 	outline: none;
-	/*background-color: #ffefe4;*/
 	font-size: 20px;
+	background-color: #ffefe4;
+}
+
+.letter_container .send {
+	font-size: 20px;
+	background-color: #ff8686;
+	border: none;
+	border-radius: 5px;
+	color: #ffffff;
+	margin-top: 1vw;
 }

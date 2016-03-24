@@ -14,7 +14,10 @@ routes.get('/write', function(req, res) {
 
 routes.post('/newLetter', function(req, res) {
 	var letter = {
-		letterBody: req.body.letterBody
+		addressee: req.body.addressee,
+		letterBody: req.body.letterBody,
+		regards: req.body.regards,
+		addresser: req.body.addresser
 	};
 	database.saveObject(letter,Letter);
 	res.redirect('/read');
@@ -48,7 +51,10 @@ routes.post('/updateLetter', function(req,res){
 		_id: req.body._id
 	};
 	var update = {
-		letterBody: req.body.letterBody
+		addressee: req.body.addressee,
+		letterBody: req.body.letterBody,
+		regards: req.body.regards,
+		addresser: req.body.addresser
 	};
 	database.updateObject(query,update,Letter);
 	res.redirect('/read');
