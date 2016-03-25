@@ -11,7 +11,11 @@ app.use(express.static(__dirname + '/public')); //place to server static files
 app.use(bodyParser.urlencoded({ extended: true })); //for retrieving form data
 app.use('/', routesMain);
 
-mongoose.connect('mongodb://localhost/YoursAlways');
+/* for local deployment */
+// mongoose.connect('mongodb://localhost/YoursAlways');
+
+/* for heroku deployment */
+mongoose.connect('mongodb://' + process.env.MONGOLAB_URI + '/YoursAlways');
 
 app.listen(app.get('port'), function(){
 	console.log("Server has started running....");
