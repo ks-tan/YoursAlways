@@ -23,11 +23,11 @@
 			<br><span class="red">X</span> <input id="your_name" class="sign_off_fields addresser" placeholder="your name" name="addresser"/>
 	<%} else {%>
 		<form class="letter_form" action="/updateLetter" method="post">
-			<span class="red">Dear</span> <input id="dear" class="sign_off_fields addressee" placeholder=" name" name="addressee" value=<%= letter[0].addressee %> /><br><br>
+			<span class="red">Dear</span> <input id="dear" class="sign_off_fields addressee" placeholder=" name" name="addressee" value="<%= letter[0].addressee %>" /><br><br>
 			<textarea id="letter_form" class="letter_body" type="text" name="letterBody" placeholder="Start writing..."><%= letter[0].letterBody %></textarea>
 			<input name="_id" type="hidden" value= <%=letter[0]._id%> />
-			<br><input id="regards" class="sign_off_fields regards" placeholder="regards" name="regards" value=<%= letter[0].regards %> />
-			<br><span class="red">X</span> <input id="your_name" class="sign_off_fields addresser" placeholder="your name" name="addresser" value=<%= letter[0].addresser %> />
+			<br><input id="regards" class="sign_off_fields regards" placeholder="regards" name="regards" value="<%= letter[0].regards %>" />
+			<br><span class="red">X</span> <input id="your_name" class="sign_off_fields addresser" placeholder="your name" name="addresser" value="<%= letter[0].addresser %>" />
 	<% } %>
 			<button class="send" type="submit">Send</button>
 		</form>
