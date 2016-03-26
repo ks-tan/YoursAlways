@@ -3,7 +3,33 @@ $(document).ready(function(){
 	$('.page_title').fadeIn("slow");
 	$('.letter_container').fadeIn("slow");
 
+	addSuperplaceholderStyling();
+    $(".letter_body").autoGrow();
 
+    addLetterSendListener();
+
+});
+
+function addLetterSendListener(){
+    $('.send').click(function(event){
+    	event.preventDefault();
+    	var addresser = $('.addresser').val();
+		var addressee = $('.addressee').val();
+    	var regards = $('.regards').val();
+    	var letterBody = $('.letter_body').val();
+    	var action = $('.letter_form').attr('action');
+		if (addresser && addressee && regards && letterBody){
+			$('.letter_form').submit();
+		} else {
+			$('.send_denied').fadeIn('slow');
+			$('.continue').click(function(){
+				$('.send_denied').fadeOut('slow');
+			});
+		}
+    });
+}
+
+function addSuperplaceholderStyling(){
 	superplaceholder({
 		el: dear,
 		sentences: [ 'Lois', 'Andy', 'Jack', 'Emma' ],
@@ -38,7 +64,7 @@ $(document).ready(function(){
 			sentenceDelay: 2000,
 			letterDelay: 100
 		}
-	})
+	});
 
 	superplaceholder({
 		el: letter_form,
@@ -50,7 +76,5 @@ $(document).ready(function(){
 			sentenceDelay: 2000,
 			letterDelay: 100
 		}
-	})
-
-    $(".letter_form").autoGrow();
-});
+	});
+}

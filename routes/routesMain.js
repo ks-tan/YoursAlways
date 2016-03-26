@@ -35,8 +35,6 @@ routes.post('/deleteLetter', function(req,res){
 		_id: req.body._id
 	};
 	database.deleteObject(letter,Letter);
-	//TODO: Delete, but do not redirect.
-	// res.redirect('/read');
 });
 
 routes.post('/edit', function(req,res){

@@ -5,7 +5,7 @@ $(document).ready(function(){
 });
 
 function addDeleteListener(){
-	$('.delete').click(function(event){
+	$('.button.delete').click(function(event){
 		event.preventDefault();
 		var letterId = $(this).attr('data-id');
 		$('.deleteConfirmation').fadeIn('slow');

@@ -43,7 +43,8 @@
 .deleteConfirmation .button {
 	margin-top: 1vw;
 	font-size: 20px;
-	background-color: #ffefe4;
+	background-color: #ffffff;
+	color: #ff8686;
 	border: none;
 	border-radius: 5px;
 }

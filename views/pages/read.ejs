@@ -19,11 +19,11 @@
 			<%= letters[i].regards %><br>
 			<%= letters[i].addresser %><br><br>
 			<span class="red"><%= letters[i].created_at %></span><br>
-			<form class="form" action="/edit" method="post">
+			<form class="form edit" action="/edit" method="post">
 				<input name="_id" type="hidden" value= <%=letters[i]._id%> />
 				<input class="button edit" type="submit" value="Edit" />
 			</form>
-			<form class="form" action="/deleteLetter" method="post">
+			<form class="form delete" action="/deleteLetter" method="post">
 				<input name="_id" type="hidden" value= <%=letters[i]._id%> />
 				<input class="button delete" type="submit" data-id=<%=letters[i]._id%> value="Delete" />
 			</form>
