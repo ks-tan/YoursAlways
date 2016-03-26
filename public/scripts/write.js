@@ -23,7 +23,7 @@ function addLetterSendListener(){
 		} else {
 			$('.send_denied').fadeIn('slow');
 			$('.continue').click(function(){
-				$('.send_denied').fadeOut('slow');
+				$('.send_denied').fadeOut('fast');
 			});
 		}
     });

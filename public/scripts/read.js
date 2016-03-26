@@ -15,16 +15,16 @@ function addDeleteListener(){
 
 function addDeleteConfirmationListener(letterId){
 	$('.delete_yes').click(function(){
-		$('.delete').closest('#'+letterId).fadeOut('slow');
+		$('.delete').closest('#'+letterId).fadeOut('fast');
 		$.ajax({
 	      url: '/deleteLetter',
 	      data: {_id: letterId},
 	      method: 'POST'
 	    });	
-	    $('.deleteConfirmation').fadeOut('slow');
+	    $('.deleteConfirmation').fadeOut('fast');
 	});
 
 	$('.delete_no').click(function(){
-		$('.deleteConfirmation').fadeOut('slow');
+		$('.deleteConfirmation').fadeOut('fast');
 	});
 }
