@@ -12,7 +12,7 @@
 	<% include ../partials/header %>
 	<div style="display:none" class="red page_title">read</div>
 	<% for(var i = 0; i < letters.length; i++){ %>
-		<div style="display:none" class="letter_container">
+		<div style="display:none" class="letter_container " id=<%=letters[i]._id%>>
 			Dear <%= letters[i].addressee %>,<br><br>
 			<%= letters[i].letterBody %><br><br>
 			<%= letters[i].regards %><br>
@@ -20,11 +20,11 @@
 			<span class="red"><%= letters[i].created_at %></span><br>
 			<form class="form" action="/edit" method="post">
 				<input name="_id" type="hidden" value= <%=letters[i]._id%> />
-				<input class="button" type="submit" value="Edit" />
+				<input class="button edit" type="submit" value="Edit" />
 			</form>
 			<form class="form" action="/deleteLetter" method="post">
 				<input name="_id" type="hidden" value= <%=letters[i]._id%> />
-				<input class="button" type="submit" value="Delete" />
+				<input class="button delete" type="submit" data-id=<%=letters[i]._id%> value="Delete" />
 			</form>
 		</div>
 	<% } %>

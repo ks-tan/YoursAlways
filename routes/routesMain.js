@@ -3,6 +3,7 @@ var routes = express.Router();
 var rootPath = require('app-root-path');
 var database = require(rootPath + '/common/databaseHelper');
 var Letter = require(rootPath + '/models/modelLetter');
+var _ = require('lodash');
 
 routes.get('/', function(req, res) {
 	res.render('pages/main');
@@ -25,7 +26,7 @@ routes.post('/newLetter', function(req, res) {
 
 routes.get('/read', function(req,res){
 	database.findObject({},Letter,function(result){
-		res.render('pages/read', {letters: result});
+		res.render('pages/read', {letters: _.reverse(result)});
 	});
 });
 
@@ -34,7 +35,8 @@ routes.post('/deleteLetter', function(req,res){
 		_id: req.body._id
 	};
 	database.deleteObject(letter,Letter);
-	res.redirect('/read');
+	//TODO: Delete, but do not redirect.
+	// res.redirect('/read');
 });
 
 routes.post('/edit', function(req,res){
