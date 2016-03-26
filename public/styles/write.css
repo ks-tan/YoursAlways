@@ -5,6 +5,7 @@
 	background-color: #ffefe4;
 	padding: 2vw;
 	border-radius: 10px;
+	margin-top: 1vw;
 }
 
 .letter_container .letter_form {
@@ -37,4 +38,26 @@
 	border-radius: 5px;
 	color: #ffffff;
 	margin-top: 1vw;
+}
+
+@media screen and (max-width:516px) {
+	.letter_container {
+		font-size: 15px;
+		width: 90%;
+		margin-right: auto;
+		margin-left: auto;
+		margin-top: 2vw;
+	}
+
+	.letter_container .letter_form {
+		font-size: 15px;
+	}
+
+	.letter_container .sign_off_fields {
+		font-size: 15px;
+	}
+
+	.letter_container .send {
+		font-size: 15px;
+	}
 }

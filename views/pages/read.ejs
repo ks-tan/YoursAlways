@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Yours Always</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="styles/helper.css">
 	<link rel="stylesheet" type="text/css" href="styles/read.css">
 	<script src = "http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -28,13 +29,13 @@
 			</form>
 		</div>
 	<% } %>
-	<div class="deleteConfirmation">
+	<div style="display:none" class="deleteConfirmation">
 		<div class="text">
 			You are about to delete a precious memory.<br>
 			Are you sure?
 		</div>
-		<button class="button">Yes</button>
-		<button class="button">No</button>
+		<button class="button delete_yes">Yes</button>
+		<button class="button delete_no">No</button>
 	</div>
 </body>
 </html>
