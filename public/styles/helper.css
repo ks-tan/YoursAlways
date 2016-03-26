@@ -14,6 +14,10 @@ a:hover { color: #fb4444; }
 	font-weight: 900;
 }
 
+.big {
+	font-size: 30px;
+}
+
 .red {
 	color: #ff8686	;
 }
